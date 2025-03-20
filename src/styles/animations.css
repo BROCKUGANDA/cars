@@ -1,0 +1,216 @@
+/* Parallax effect */
+.parallax-bg {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  will-change: transform;
+}
+
+/* Optimized Engine Rev Animation */
+.rev-engine {
+  animation: rev 0.5s ease-out;
+  will-change: transform;
+}
+
+@keyframes rev {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Speed Lines Animation - optimized */
+.speed-lines-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.speed-line {
+  position: absolute;
+  left: -150px;
+  height: 2px;
+  background-color: rgba(255, 215, 0, 0.6); /* Lamborghini gold-yellow */
+  transform: rotate(-10deg);
+  animation: speedLines 1.5s linear infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes speedLines {
+  0% {
+    transform: translateX(0) rotate(-10deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 150px)) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+/* Refined Car Float Animation */
+.float-car {
+  animation: float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Wheel spin animation - optimized */
+.spin-wheel {
+  animation: spin 3s linear infinite;
+  will-change: transform;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Video Background Styles - optimized */
+video {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+/* For browsers that don't support object-fit */
+@supports not (object-fit: cover) {
+  video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Section Reveal Animations */
+.reveal-bottom {
+  animation: revealBottom 1s ease-out forwards;
+}
+
+@keyframes revealBottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Decorative Animations */
+.pulse-subtle {
+  animation: pulsate 4s ease-in-out infinite;
+}
+
+@keyframes pulsate {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Loading Animation */
+.loading-indicator {
+  animation: loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  49% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+/* Button Hover Effect */
+.btn-hover-effect {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hover-effect:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.btn-hover-effect:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Glow effect */
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* Lamborghini yellow glow */
+}
+
+/* Wheel spin animation */
+.wheel-spin {
+  animation: spin 2s linear infinite;
+  will-change: transform;
+}
+
+/* Video background */
+video.bg-video {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+} 

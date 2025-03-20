@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  @apply bg-lamborghini-black text-white font-sans;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-sans font-bold tracking-wide;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-lamborghini-red text-white px-6 py-3 font-medium hover:bg-lamborghini-yellow hover:text-lamborghini-black transition-colors duration-300;
+}
+
+/* Container */
+.container {
+  @apply px-4 mx-auto;
+  max-width: 1280px;
+}
+
+/* Section spacing */
+section {
+  @apply py-16 md:py-24;
+}
+
+/* Responsive helpers */
+.mobile-only {
+  @apply block md:hidden;
+}
+
+.desktop-only {
+  @apply hidden md:block;
+}
+
+/* Utility classes */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gold-accent {
+  @apply text-lamborghini-gold;
+}
+
+.main-container {
+  @apply max-w-screen-xl mx-auto px-4 md:px-8;
+}
+
+.card {
+  @apply bg-lamborghini-black rounded-none overflow-hidden shadow-lg transform transition-all duration-500;
+}
+
+.glass-effect {
+  @apply bg-white bg-opacity-5 backdrop-filter backdrop-blur-md border-b border-white border-opacity-10;
+}
+
+/* Elegant Decorative Elements */
+.decorative-line {
+  @apply w-16 h-px bg-lamborghini-red my-6 mx-auto;
+}
+
+.decorative-vertical {
+  @apply w-px h-16 bg-lamborghini-red opacity-80;
+}
+
+/* Image Hover Effects */
+.image-hover {
+  @apply overflow-hidden;
+}
+
+.image-hover img {
+  @apply transition-transform duration-700 ease-out;
+}
+
+.image-hover:hover img {
+  @apply scale-105;
+}
+
+/* Accessibility */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-lamborghini-red;
+}
+
+/* Custom Scrollbar */
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-lamborghini-black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-lamborghini-red bg-opacity-70 hover:bg-opacity-100 transition-colors duration-300;
+  }
+} 
